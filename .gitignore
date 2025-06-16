@@ -1,0 +1,27 @@
+# Carpetas generadas automáticamente
+node_modules/
+dist/
+.build/
+.vite/
+coverage/
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Configuración de editor
+.vscode/
+.idea/
+
+# Archivos de despliegue innecesarios
+*.local
+*.cache
+
+# Otros posibles archivos generados
+*.swp
