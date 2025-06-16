@@ -63,22 +63,22 @@ export default function Ley7Horas() {
 
       <form onSubmit={evaluarCompatibilidad} className="bg-[#0b0f1a] w-full max-w-lg space-y-4">
         <div>
-          <label className="block text-sm mb-1">Inicio primer vuelo:</label>
+          <label className="block text-sm mb-1">Inicio primer periodo:</label>
           <input type="datetime-local" value={inicio1} onChange={e => setInicio1(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
         </div>
 
         <div>
-          <label className="block text-sm mb-1">Fin primer vuelo:</label>
+          <label className="block text-sm mb-1">Fin primer periodo:</label>
           <input type="datetime-local" value={fin1} onChange={e => setFin1(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
         </div>
 
         <div>
-          <label className="block text-sm mb-1">Inicio segundo vuelo:</label>
+          <label className="block text-sm mb-1">Inicio segundo periodo:</label>
           <input type="datetime-local" value={inicio2} onChange={e => setInicio2(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
         </div>
 
         <div>
-          <label className="block text-sm mb-1">Fin segundo vuelo:</label>
+          <label className="block text-sm mb-1">Fin segundo periodo:</label>
           <input type="datetime-local" value={fin2} onChange={e => setFin2(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
         </div>
 
