@@ -19,7 +19,7 @@ export default function Ley7Horas() {
 
     const msHora = 1000 * 60 * 60;
 
-    // Ajuste por si cruza medianoche
+    // Ajuste si los periodos cruzan medianoche
     if (f1 < i1) f1.setDate(f1.getDate() + 1);
     if (f2 < i2) f2.setDate(f2.getDate() + 1);
     if (i2 < i1) i2.setDate(i2.getDate() + 1);
@@ -28,7 +28,6 @@ export default function Ley7Horas() {
     const duracion2 = (f2.getTime() - i2.getTime()) / msHora;
     const totalHoras = duracion1 + duracion2;
 
-    const diferenciaInicio = (i2.getTime() - i1.getTime()) / msHora;
     const descansoEntreVuelos = (i2.getTime() - f1.getTime()) / msHora;
 
     let mensaje = "";
@@ -54,42 +53,73 @@ export default function Ley7Horas() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0f1a] text-white px-6 py-10 flex flex-col items-center">
-      <Link to="/" className="absolute left-4 top-4">
-        <ArrowLeftCircle size={32} className="text-white hover:text-gray-300" />
-      </Link>
+    <div className="min-h-screen bg-[#0b0f1a] flex items-center justify-center px-4">
+      <div className="w-full max-w-lg relative">
+        <Link to="/" className="absolute left-0 -top-12">
+          <ArrowLeftCircle size={32} className="text-white hover:text-gray-300" />
+        </Link>
 
-      <h2 className="text-3xl font-bold mb-6 text-center">Compatibilidad entre Vuelos</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">Compatibilidad entre Vuelos</h2>
 
-      <form onSubmit={evaluarCompatibilidad} className="bg-[#0b0f1a] w-full max-w-lg space-y-4">
-        <div>
-          <label className="block text-sm mb-1">Inicio primer periodo:</label>
-          <input type="datetime-local" value={inicio1} onChange={e => setInicio1(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
-        </div>
+        <form onSubmit={evaluarCompatibilidad} className="bg-[#0b0f1a] w-full space-y-4">
+          <div>
+            <label className="block text-sm mb-1">Inicio primer periodo:</label>
+            <input
+              type="datetime-local"
+              value={inicio1}
+              onChange={e => setInicio1(e.target.value)}
+              required
+              className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2"
+            />
+          </div>
 
-        <div>
-          <label className="block text-sm mb-1">Fin primer periodo:</label>
-          <input type="datetime-local" value={fin1} onChange={e => setFin1(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
-        </div>
+          <div>
+            <label className="block text-sm mb-1">Fin primer periodo:</label>
+            <input
+              type="datetime-local"
+              value={fin1}
+              onChange={e => setFin1(e.target.value)}
+              required
+              className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2"
+            />
+          </div>
 
-        <div>
-          <label className="block text-sm mb-1">Inicio segundo periodo:</label>
-          <input type="datetime-local" value={inicio2} onChange={e => setInicio2(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
-        </div>
+          <div>
+            <label className="block text-sm mb-1">Inicio segundo periodo:</label>
+            <input
+              type="datetime-local"
+              value={inicio2}
+              onChange={e => setInicio2(e.target.value)}
+              required
+              className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2"
+            />
+          </div>
 
-        <div>
-          <label className="block text-sm mb-1">Fin segundo periodo:</label>
-          <input type="datetime-local" value={fin2} onChange={e => setFin2(e.target.value)} required className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2" />
-        </div>
+          <div>
+            <label className="block text-sm mb-1">Fin segundo periodo:</label>
+            <input
+              type="datetime-local"
+              value={fin2}
+              onChange={e => setFin2(e.target.value)}
+              required
+              className="w-full bg-transparent border border-gray-600 rounded-xl px-3 py-2"
+            />
+          </div>
 
-        <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-2 transition">Evaluar</button>
-      </form>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-2 transition"
+          >
+            Evaluar
+          </button>
+        </form>
 
-      {resultado && (
-        <div className="mt-6 p-4 bg-[#1a1a1a] border-l-4 border-green-500 rounded-lg whitespace-pre-line">
-          {resultado}
-        </div>
-      )}
+        {resultado && (
+          <div className="mt-6 p-4 bg-[#1a1a1a] border-l-4 border-green-500 rounded-lg whitespace-pre-line">
+            {resultado}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
