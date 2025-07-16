@@ -215,9 +215,18 @@ export default function PSVCalculator() {
 
         {/* Resultado */}
        {resultado && (
-       <pre className="mt-4 w-full text-left text-lg font-semibold whitespace-pre text-green-400">
-        {resultado}
-      </pre>
+       <div className="
++            mt-4
++            w-full
++            text-left
++            text-lg
++            font-semibold
++            text-green-400
++            whitespace-pre-wrap
++            break-words
++          ">
++            {resultado}
++          </div>
 )}
 
       </div>
