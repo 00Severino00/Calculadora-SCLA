@@ -214,11 +214,12 @@ export default function PSVCalculator() {
         </button>
 
         {/* Resultado */}
-        {resultado && (
-          <pre className="mt-4 text-center text-lg font-semibold whitespace-pre text-green-400">
-            {resultado}
-          </pre>
-        )}
+       {resultado && (
+       <pre className="mt-4 w-full text-left text-lg font-semibold whitespace-pre text-green-400">
+        {resultado}
+      </pre>
+)}
+
       </div>
     </div>
   );

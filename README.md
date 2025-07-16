@@ -11,7 +11,7 @@ Aerotrip es una **aplicación web progresiva (PWA)** desarrollada con React + Ty
 ## 🚀 Deploy
 
 La aplicación está desplegada en Netlify:  
-👉 [https://calculadora-scla.netlify.app](https://calculadora-scla.netlify.app) 
+👉 [https://calculadora-trip.netlify.app](https://calculadora-trip.netlify.app) 
 ---
 
 ## 📦 Instalación y uso local

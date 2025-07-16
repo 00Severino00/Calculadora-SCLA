@@ -25,3 +25,6 @@ Thumbs.db
 
 # Otros posibles archivos generados
 *.swp
+
+# Local Netlify folder
+.netlify
