@@ -216,17 +216,17 @@ export default function PSVCalculator() {
         {/* Resultado */}
        {resultado && (
        <div className="
-+            mt-4
-+            w-full
-+            text-left
-+            text-lg
-+            font-semibold
-+            text-green-400
-+            whitespace-pre-wrap
-+            break-words
-+          ">
-+            {resultado}
-+          </div>
+               mt-4
+               w-full   
+               text-left
+                text-lg
+                font-semibold
+               text-green-400
+                whitespace-pre-wrap
+                break-words
+              ">
+            {resultado}
+         </div>
 )}
 
       </div>
