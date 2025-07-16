@@ -212,24 +212,20 @@ export default function PSVCalculator() {
         >
           Calcular
         </button>
+        </div>
 
-        {/* Resultado */}
-       {resultado && (
-       <div className="
-               mt-4
-               w-full   
-               text-left
-                text-lg
-                font-semibold
-               text-green-400
-                whitespace-pre-wrap
-                break-words
-              ">
-            {resultado}
-         </div>
+{/* Resultado */}
+{resultado && (
+  <div className="mt-4 max-w-md w-full mx-auto space-y-2">
+    {resultado.split('\n').map((line, idx) => (
+      <p
+        key={idx}
+        className="text-left text-lg font-semibold text-green-400 flex items-center"
+      >
+        {/* El emoji viene dentro de la línea, así que solo lo mostramos tal cual */}
+        <span className="mr-2">{line}</span>
+      </p>
+    ))}
+  </div>
 )}
-
-      </div>
-    </div>
-  );
-}
+</div>)}
