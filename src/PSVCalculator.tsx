@@ -65,7 +65,7 @@ export default function PSVCalculator() {
     );
 
     /* 7) Resultado */
-    const fmt = (d) => d.toTimeString().slice(0, 5);
+    const fmt = (d: Date): string => d.toTimeString().slice(0, 5);
 
     const noTiempoVuelo = tvHoras === 0 && tvMin === 0; // ⇢ NUEVO
 
